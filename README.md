@@ -25,7 +25,7 @@ Y labeli endidau a ddefnyddir ar hyn o bryd yw: PERSON, GPE, LOC a DATE.
 
 2. Defnyddir tagiwr rhannau ymadrodd Cymraeg i adnabod unrhyw enwau priod a fethwyd gan y cam blaenorol. Mae'r dull hwn yn cuddio'r enw priod gan roi XPROPNX yn ei le, ond nid yw'n dethol label endid priodol ar ei gyfer.
 
-3. Yn olaf, gwaredir unrhyw segment lle nad oes gan yr Anonymeiddiwr ddigon o hyder y gellid ei anonymeddio yn briodol.
+3. Yn olaf, gwaredir unrhyw segment sy'n parhau i fod yn broblemus.
 
 Golyga’r trydydd dull hwn o waredu segmentau fod maint y data allbwn yn a gynhyrchir gan yr Anonymeiddiwr yn llai o ran maint na’r data gwreiddiol. Mae’r union wahaniaeth maint rhwng y data mewnbwn a’r data allbwn yn amrywio yn ôl cynnwys y data, ond gyda’n ffeil prawf o 719,997 segment sensitif, cafwyd allbwn o 291,130 segment, sy’n cynrychioli 40% o’r data gwreiddiol. Mae anonymeiddio yn gyfaddawd rhwng goranonymeiddio ar un llaw a pheidio ag anonymeiddio endidau a ddylid fod wedi cael eu hanonymeiddio ar y llaw arall. Gobeithiwn fod ein gosodiadau gweddol geidwadol ni yn galluogi rhannu a defnyddio llawer o ddata na fyddai wedi bod modd ei ddosbarthu fel arall.
 
@@ -115,30 +115,30 @@ Fersiwn beta gychwynnol o’r Anonymeiddiwr yw hwn. Gobeithiwn ei ddatblygu ymhe
 
 
 # Beta Anonymizer
-Pwrpas yr anonymeiddiwr hwn yw tynnu gwybodaeth bersonol allan o ddata Cymraeg, yn ogystal ag allan o ddata cyfochrog Saesneg-Cymraeg megis cofion cyfieithu. Y nod yw hwyluso rhannu a dosbarthu data hwnnw at ddibenion hyfforddi modelau iaith (gan gynnwys modelau cyfieithu peirianyddol) drwy leddfu pryderon ynglŷn â rhannu data cyffredinol sy'n cynnwys enwau pobl, enwau lleoedd ac yn y blaen. Sylwer nad yw'r Anonymeiddiwr eto'n addas ar gyfer dogfennau sensitif sy'n cynnwys data gwirioneddol bersonol fel cofnodion meddygol ac ati.
+The purpose of this anonymizer is to remove personal information from Welsh-language data, and from parallel English-Welsh data such as translation memories. The aim is to facilitate the sharing and distribution of such data for the purpose of training language models (including in particular machine translation models) by assuaging fears about sharing general data which may include person names, place names etc. Note that this Anonymizer is not suitable for use on sensitive documents which include truly personal data such as medical records and so on.
 
-Ceir dau Anonymeiddiwr yn y pecyn hwn:
+There are two anonymizer in this collection:
 
-1. Anonymeiddiwr Data Cyfochrog
-1. Anonymeiddiwr Data Cymraeg
+1. Parallel Data Anonymizer
+1. Welsh-Language Data Anonymizer
 
-## Anonymeiddiwr Data Cyfochrog
+## Parallel Data Anonymizer
 
-Defnyddir tri dull i anonymeiddio gan yr Anonymeiddiwr Data Cyfochrog:
+Three different methods are used by the Parallel Data Anonymizer:
 
-1. Defnyddir technegau Adnabod Endidau Enwol (NER) i adnabod yr endidau sydd wedi’u henwi yn y data (e.e. "John Davies") a’u cyfnewid am label yr endid (e.e. "PERSON"). Canlyniad hynny yw newid:
+1. Named Entity Recognition (NER) is used to identify entities occuring in the data (e.g. "John Davies") which can then be substituted by their entity type (e.g. "PERSON"). This results in changing:
 
 > "John Davies agreed with the decision.       Cytunodd John Davies â’r penderfyniad."
 
-i
+to
 
 > PERSON agreed with the decision.       Cytunodd PERSON â’r penderfyniad."
 
-Y labeli endidau a ddefnyddir ar hyn o bryd yw: PERSON, GPE, LOC a DATE.
+Currently, the following entities are used: PERSON, GPE, LOC a DATE.
 
-2. Defnyddir tagiwr rhannau ymadrodd Cymraeg i adnabod unrhyw enwau priod a fethwyd gan y cam blaenorol. Mae'r dull hwn yn cuddio'r enw priod gan roi XPROPNX yn ei le, ond nid yw'n dethol label endid priodol ar ei gyfer.
+2. Additionally, a Welsh-language part of speech tagger is used to identify any proper nouns that may have benn missed by the previous step. These are replaced by the text 'XPROPNX', but no entity type is assigned.
 
-3. Yn olaf, gwaredir unrhyw segment lle nad oes gan yr Anonymeiddiwr ddigon o hyder y gellid ei anonymeddio yn briodol.
+3. Lastly, any remaining problematic segments are simply discarded.
 
 Golyga’r trydydd dull hwn o waredu segmentau fod maint y data allbwn yn a gynhyrchir gan yr Anonymeiddiwr yn llai o ran maint na’r data gwreiddiol. Mae’r union wahaniaeth maint rhwng y data mewnbwn a’r data allbwn yn amrywio yn ôl cynnwys y data, ond gyda’n ffeil prawf o 719,997 segment sensitif, cafwyd allbwn o 291,130 segment, sy’n cynrychioli 40% o’r data gwreiddiol. Mae anonymeiddio yn gyfaddawd rhwng goranonymeiddio ar un llaw a pheidio ag anonymeiddio endidau a ddylid fod wedi cael eu hanonymeiddio ar y llaw arall. Gobeithiwn fod ein gosodiadau gweddol geidwadol ni yn galluogi rhannu a defnyddio llawer o ddata na fyddai wedi bod modd ei ddosbarthu fel arall.
 
