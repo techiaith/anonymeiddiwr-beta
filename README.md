@@ -140,9 +140,9 @@ Currently, the following entities are used: PERSON, GPE, LOC a DATE.
 
 3. Lastly, any remaining problematic segments are simply discarded.
 
-This last step does result in the size of the output data produced by the anonymizer being smaller than the original data. The exact difference in size varies depending on the content of the data, but with our test file of 719,997 sensitive segments we received 291,130 segments of output data, representing 40% of the original data. Anonymization is somewhat of a compromise between overanonymization on teh one hand and underranonymization on the other. We hope that our current conservative settings will enable the sharing and use of data that would otherwise not be distributed.
+This last step does result in the size of the output data produced by the anonymizer being smaller than the original data. The exact difference in size varies depending on the content of the data, but with our test file of 719,997 sensitive segments we received 291,130 segments of output data, representing 40% of the original data. Anonymization is somewhat of a compromise between overanonymization on teh one hand and underanonymization on the other. We hope that our current conservative settings will enable the sharing and use of data that would otherwise not be distributed.
 
-The following are examples of parallel segements that were anonymized by the Anonymizer:
+The following are examples of parallel segments that were anonymized by the Anonymizer:
 
 PERSON believes it may be more common than the literature indicates  
 *Mae PERSON yn credu y gall fod yn fwy cyffredin na mae'r llenyddiaeth yn ei awgrymu.*
@@ -200,27 +200,27 @@ An example file featuring an anonymized version of our CC0 Corpus can be found i
 ## Warning
 This anonymizer is not suitable for sensitive personal data. The anonymizer is not intended for use on documents that include sensitive personal data such as personal medical records. It is primarily intended as an extra layer of security to enable public bodies to be more confident in sharing general non-sensitive documents which none the less may include the personal names of some staff members etc. which it may be preferable not to share. **The most effective way of securing that sensitive documents are not shared is to label documents as such prior to translation and to not include such texts within general translation memories. This Anonymizerdoes not replace the need for a robust data security policy.**
 
-## Cyfarwyddiadau Gosod a Defnyddio'r Anonymeiddiwr
-Mae’r Anonymeiddiwr Beta yn raglen Python sydd angen Python 3.8 neu'n ddiweddarach i redeg. Mae'n rhaid rhedeg yr Anonymeiddiwr ar y llinell orchymyn. Rhaid i chi hefyd fod wedi gosod pecyn llyfrgell spaCy o flaen llaw (gweler https://spacy.io/usage), ac argymhellwn lwytho’r model mawr (en_web_core_lg) i lawr er mwyn pweru’r Adnabod Endidau. Ar gyfer galluogi'r ochr Gymraeg, rhaid gosod y ffeil `cy` sy'n gynwysiedig o fewn ffolder `lang` eich gosodiad chi o spaCy. Mae'r tagio rhannau ymadrodd Cymraeg yn defnyddio'r model sy'n gynwysiedig gyda'r pecyn hwn. 
+## Instructions for Installation and Use
+The Beta Anonymizer is a Python program requiring Python 3.8 or later. It must be run on the command line. The spaCy software package must also be installed before hand (see https://spacy.io/usage), and we recommend using the large model (en_web_core_lg) to power the NER. To enable processing Welsh texts, the included `cy` folder must be placed within the `lang` folder of your spaCy installation. The Welsh part of speech tagging uses the model included within this package.
 
-### Anonymeiddiwr Data Cyfochrog
-Mae’r anonymeiddiwr hwn yn disgwyl ffeil `.csv` fel ffeil fewnbwn, gyda’r testun Saesneg wedi ei labeli fel y golofn ‘source’ a’r testun Cymraeg fel y golofn ‘target’, a chyda thab yn eu gwahanu.
+### Parallel Data Anonymizer
+This anonymizer expects a `.csv` input file, with the English text labelled as ‘source’ and the Welsh column labelled as ‘target’, and with a tab to separate both columns.
 
-I’w defnyddio, ewch i leoliad y ffeil a theipio:
+To use, navigate to the anonymizer file's location and type:
 
 `anonymize_ency.py input_file.csv  output_file.csv`
 
-gan ddefnyddio enw eich ffeil yn hytrach nag `input_file.csv`, a’r enw y dymunwch ei roi ar y ffeil allbwn yn lle `output_file.csv`.
+using the name of your input file rather than `input_file.csv`, and the name of your output file rather than `output_file.csv`.
 
-### Anonymeiddiwr Data Cymraeg
+### Welsh Data Anonymyzer
 
-Mae’r anonymeiddiwr hwn yn disgwyl ffeil testun plaen `.txt` fel ffeil fewnbwn, gydag un frawddeg Gymraeg i bob llinell.
+This anonymizer expects a plain `.txt` input file, with a single Welsh sentence on each line.
 
-I’w defnyddio, ewch i'r lleoliad lle y gosodwyd y ffeil `anonymize_cy.py` a theipio:
+To use, navigate to the anonymizer file's location and type:
 
 `anonymize_cy.py input_file.txt  output_file.txt`
 
-gan ddefnyddio enw eich ffeil yn hytrach nag `input_file.txt`, a’r enw y dymunwch ei roi ar y ffeil allbwn yn lle `output_file.txt`.
+using the name of your input file rather than `input_file.csv`, and the name of your output file rather than `output_file.csv`.
 
 ## Datblygiadau sydd i ddod
 Fersiwn beta gychwynnol o’r Anonymeiddiwr yw hwn. Gobeithiwn ei ddatblygu ymhellach dros y misoedd nesaf er mwyn codi hyder yr algorithm anonymeiddio fel bod modd anonymeiddio rhagor o endidau segmentau yn hytrach na gwaredu’r segment gyfan. I wneud hynny, byddwn yn gwella’r Adnabod Endidau Saesneg ymhellach trwy ei hyfforddi ar ddata sy’n cynnwys endidau unigryw Cymreig. Bwriadwn hefyd gyhoeddi ffrwyth ein harbrofion gyda chyfnewid enwau endidau (e.e. cyfnewid ‘John Davies’ am enw arall ar hap (e.e ‘Keith Williams’), yn hytrach na’u cyfnewid am labeli endidau fel ‘PERSON’. Y gobaith yw y bydd hyn yn galluogi'r brawddegau a anonymeiddiwyd i fod yn well data hyfforddi ar gyfe modelau iaith yn y dyfodol.
