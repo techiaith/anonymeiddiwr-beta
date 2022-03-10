@@ -1,0 +1,53 @@
+{
+  "lang":"cy",
+  "name":"model",
+  "version":"0.0.0",
+  "spacy_version":">=2.3.2",
+  "description":"",
+  "author":"Gruffudd Prys, Uned Technolegau Iaith, Prifysgol Bangor, Cymru / Language Technologies Unit, Bangor University, Wales",
+  "email":"techiaith@bangor.ac.uk",
+  "url":"techiaith.bangor.ac.uk // techiaith.cymru",
+  "license":"MIT",
+  "spacy_git_version":"bf778f59c",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":"spacy_pretrained_vectors"
+  },
+  "pipeline":[
+    "tagger",
+    "sentencizer"
+  ],
+  "factories":{
+    "tagger":"tagger",
+    "sentencizer":"sentencizer"
+  },
+  "labels":{
+    "tagger":[
+      "",
+      "ABBR",
+      "ADJ",
+      "ADP",
+      "ADV",
+      "AUX",
+      "CCONJ",
+      "CONJ",
+      "DET",
+      "INTJ",
+      "NOUN",
+      "NUM",
+      "PART",
+      "PRON",
+      "PROPN",
+      "PUNCT",
+      "SCONJ",
+      "SPACE",
+      "SYM",
+      "VERB",
+      "X",
+      "_SP",
+      "xxx"
+    ]
+  }
+}
