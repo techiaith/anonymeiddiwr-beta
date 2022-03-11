@@ -112,7 +112,7 @@ gan ddefnyddio enw eich ffeil yn hytrach nag `input_file.txt`, a’r enw y dymun
 ## Datblygiadau sydd i ddod
 Fersiwn beta gychwynnol o’r Anonymeiddiwr yw hwn. Gobeithiwn ei ddatblygu ymhellach dros y misoedd nesaf er mwyn codi hyder yr algorithm anonymeiddio fel bod modd anonymeiddio rhagor o endidau segmentau yn hytrach na gwaredu’r segment gyfan. I wneud hynny, byddwn yn gwella’r Adnabod Endidau Saesneg ymhellach trwy ei hyfforddi ar ddata sy’n cynnwys endidau unigryw Cymreig. Bwriadwn hefyd gyhoeddi ffrwyth ein harbrofion gyda chyfnewid enwau endidau (e.e. cyfnewid ‘John Davies’ am enw arall ar hap (e.e ‘Keith Williams’), yn hytrach na’u cyfnewid am labeli endidau fel ‘PERSON’. Y gobaith yw y bydd hyn yn galluogi'r brawddegau a anonymeiddiwyd i fod yn well data hyfforddi ar gyfe modelau iaith yn y dyfodol.
 
-
+Diolch i Lywodraeth Cymru am ariannu'r gwaith hwn fel rhan o broject Technoleg Cymraeg 2021-22.
 
 # Beta Anonymizer
 The purpose of this anonymizer is to remove personal information from Welsh-language data, and from parallel English-Welsh data such as translation memories. The aim is to facilitate the sharing and distribution of such data for the purpose of training language models (including in particular machine translation models) by assuaging fears about sharing general data which may include person names, place names etc. Note that this Anonymizer is not suitable for use on sensitive documents which include truly personal data such as medical records and so on.
@@ -225,3 +225,4 @@ using the name of your input file rather than `input_file.csv`, and the name of 
 ## Upcoming Developments
 This is a Beta version of the Anonymizer. We hope to develop it further over the coming months to improve the NER and increase the number of segments that can be retained rather than be discarded. We will be training the English NER model on Welsh entities, improving on our experimental Welsh NER and developing a method for substituting entities with realistic but artificial replacements so that the data appears more natural and better suited for training machine translation engines. 
 
+We thank the Welsh Government for funding this work as part of the Technoleg Cymraeg 2021-22 project.
