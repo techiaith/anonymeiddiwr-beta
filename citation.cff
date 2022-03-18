@@ -1,0 +1,21 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Anonymeiddiwr Beta/Beta Anonymizer
+message: >-
+  Please cite this software using the metadata from
+  'preferred-citation'.
+type: software
+authors:
+  - given-names: Gruffudd
+    family-names: Prys
+    email: g.prys@bangor.ac.uk
+    affiliation: Bangor University Language Technology Unit
+    orcid: 'https://orcid.org/0000-0002-2910-2460'
+  - given-names: Gareth Llewellyn
+    family-names: Watkins
+    email: g.watkins@bangor.ac.uk
+    affiliation: Bangor University Language Technology Unit
+    orcid: 'https://orcid.org/0000-0001-8929-0718'
+  - {}
