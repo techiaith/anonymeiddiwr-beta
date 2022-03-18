@@ -2,11 +2,11 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: Anonymeiddiwr Beta/Beta Anonymizer
+title: Anonymeiddiwr Beta a Chorpws CC0 wedi ei Anonymeiddio/Beta Anonymizer and Anonymized CC0 Corpus
 message: >-
   Please cite this software using the metadata from
   'preferred-citation'.
-type: software
+type: software and dataset
 authors:
   - given-names: Gruffudd
     family-names: Prys
