@@ -18,3 +18,36 @@ authors:
     email: g.watkins@bangor.ac.uk
     affiliation: Bangor University Language Technology Unit
     orcid: 'https://orcid.org/0000-0001-8929-0718'
+  - {}
+abstract: >-
+  Pwrpas yr anonymeiddiwr hwn yw tynnu gwybodaeth
+  bersonol allan o ddata Cymraeg, yn ogystal ag allan
+  o ddata cyfochrog Saesneg-Cymraeg megis cofion
+  cyfieithu. Y nod yw hwyluso rhannu a dosbarthu data
+  hwnnw at ddibenion hyfforddi modelau iaith (gan
+  gynnwys modelau cyfieithu peirianyddol) drwy leddfu
+  pryderon ynglŷn â rhannu data cyffredinol sy'n
+  cynnwys enwau pobl, enwau lleoedd ac yn y blaen.
+  Sylwer nad yw'r Anonymeiddiwr eto'n addas ar gyfer
+  dogfennau sensitif sy'n cynnwys data gwirioneddol
+  bersonol fel cofnodion meddygol ac ati.
+
+
+  The purpose of this anonymizer is to remove
+  personal information from Welsh-language data, and
+  from parallel English-Welsh data such as
+  translation memories. The aim is to facilitate the
+  sharing and distribution of such data for the
+  purpose of training language models (including in
+  particular machine translation models) by assuaging
+  fears about sharing general data which may include
+  person names, place names etc. Note that this
+  Anonymizer is not suitable for use on sensitive
+  documents which include truly personal data such as
+  medical records and so on.
+keywords:
+  - Welsh Language
+  - Anonymizer
+license: MIT
+version: '22.03'
+date-released: '2022-03-11'
