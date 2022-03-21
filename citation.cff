@@ -4,8 +4,12 @@
 cff-version: 1.2.0
 title: Anonymeiddiwr Beta a Chorpws CC0 wedi ei Anonymeiddio/Beta Anonymizer and Anonymized CC0 Corpus
 message: >-
-  Please cite this software using the metadata from
-  'preferred-citation'.
+  Er ein bod yn rhyddhau'r data hwn o dan drwydded
+  MIT, gofynwn yn garedig i chi ystyried rhoi
+  cydnabyddiaeth i'r gwaith hwn. | While we are
+  releasing this data under the MIT licence, should
+  you use this resource, we kindly ask you to
+  consider acknowledging our work.
 type: software
 authors:
   - given-names: Gruffudd
