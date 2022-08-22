@@ -82,7 +82,7 @@ Dyma enghraifft o destun a anonymeiddiwyd gan yr Anonymeiddiwr Data Cymraeg:
 * Rwan, cymer dy gyllell a rhwyma hi wrth flaen yr ede.
 * Mae copi o'r hunangofiant wedi ei gadw fel llawysgrif yn Llyfrgell Prifysgol XPROPNX.
 
-Ceir ffeil enghreifftiol o allbwn anonymeiddio ein Corpws CC0 yn `anonymized_cc0_cy_conc_covost.txt` . 
+Ceir ffeil enghreifftiol o allbwn anonymeiddio ein Corpws CC0 yn `anonymized_cc0_cy_conc_covost.txt` . Penderfynwyd cynnwys y corpws CC-0 o fewn project yr anonymeiddiwr gan nad oes rheswm i’r corpws hwn fod wedi’i anonymeiddio ar wahân i fel arddangosiad o allu’r anonymeiddiwr. Mae hynny oherwydd bod y corpws heb ei anonymeiddio eisoes ar gael yn agored o dan drwydded CC-0 o'n GitHub cyhoeddus (gw. https://github.com/techiaith/corpws-CC0).
 
 ## Rhybudd
 Nid yw’r Anonymeiddiwr hwn yn addas ar gyfer data personol sensitif. Ni fwriadwyd yr Anonymeiddiwr hwn ar gyfer ei ddefnyddio gyda dogfennau sy’n cynnwys data sensitif personol a phreifat megis cofnodion iechyd unigolion. Fe’i bwriadwyd yn bennaf fel haen ychwanegol o ddiogelwch i alluogi cyrff cyhoeddus i fod yn fwy hyderus i rannu cynnwys dogfennau cyffredinol sydd o natur ansensitif, ond sydd efallai yn cynnwys enwau aelodau o staff ac ati y byddai’n well peidio eu rhannu. **Y ffordd orau o sicrhau na chaiff cynnwys dogfennau sensitif eu rhannu yw i adnabod a nodi sensitifrwydd dogfennau cyn eu cyfieithu ac i beidio a chynnwys unrhyw ddogfennau sensitif o fewn cof cyfieithu cyffredinol. Nid yw’r Anonymeiddiwr yn disodli’r angen am bolisi diogeledd data cadarn.**
@@ -195,7 +195,7 @@ Dyma enghraifft o destun a anonymeiddiwyd gan yr Anonymeiddiwr Data Cymraeg:
 * Rwan, cymer dy gyllell a rhwyma hi wrth flaen yr ede.
 * Mae copi o'r hunangofiant wedi ei gadw fel llawysgrif yn Llyfrgell Prifysgol XPROPNX.
 
-An example file featuring an anonymized version of our CC0 Corpus can be found in the file `anonymized_cc0_cy_conc_covost.txt` . 
+An example file featuring an anonymized version of our CC0 Corpus can be found in the file `anonymized_cc0_cy_conc_covost.txt` . It was decided to include the CC-0 corpus within the anonymizer project as there is no reason for this corpus to have been anonymized apart from as a demonstration of the anonymizer's ability. That's because the unanonymized corpus is already openly available under a CC-0 license from our public GitHub (see https://github.com/techiaith/corpws-CC0).
 
 ## Warning
 This anonymizer is not suitable for sensitive personal data. The anonymizer is not intended for use on documents that include sensitive personal data such as personal medical records. It is primarily intended as an extra layer of security to enable public bodies to be more confident in sharing general non-sensitive documents which none the less may include the personal names of some staff members etc. which it may be preferable not to share. **The most effective way of securing that sensitive documents are not shared is to label documents as such prior to translation and to not include such texts within general translation memories. This Anonymizerdoes not replace the need for a robust data security policy.**
