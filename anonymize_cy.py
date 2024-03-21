@@ -8,7 +8,8 @@ import datetime
 
 begin_time = datetime.datetime.now()
 
-nlp_cy = spacy.load("/home/gruffudd/spacy23/model_tagio_lemateiddio_spacy")
+# https://github.com/techiaith/spacy_cy_tag_lem_ner_lg
+nlp_cy = spacy.load("/model_tagio_lemateiddio_spacy")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
